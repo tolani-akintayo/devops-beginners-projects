@@ -1,0 +1,30 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    
+jobs:
+  say-hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out code
+        uses: actions/checkout@4
+        
+      - name: Print a message
+        run: echo "Hello from GitHub Actions!"
+        
+      - name: Show the current directory
+        run: |
+          pwd
+          ls -la
+          echo "Node version:" && node --version || echo "Node not installed"
+          
+      - name: Show environment info
+        run: |
+          echo "Runner os: ${{ runner.os }}"
+          echo "GitHub Actor: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
