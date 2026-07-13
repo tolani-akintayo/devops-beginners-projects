@@ -1,3 +1,0 @@
-my-app@1.0.0 /Users/macbookm2/node-project/my-app
-└── express@5.2.1
-
