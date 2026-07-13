@@ -1,3 +1,4 @@
 node_modules/
 pat.txt
 git-pat.txt
+.env
