@@ -1,3 +1,5 @@
+name: Hello-World Ci pipeline
+
 on:
   push:
     branches: [main]
