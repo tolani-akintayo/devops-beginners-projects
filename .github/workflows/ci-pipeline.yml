@@ -9,7 +9,7 @@ on:
 env:
   NODE_VERSION: '24'
   REGISTRY: docker.io
-  IMAGE_NAME: devopsforjesus/devops-demo:v1.0.1
+  IMAGE_NAME: devopsforjesus/devops-demo:v1.0.2
 
 jobs:
   # ── JOB 1: LINT AND FORMAT CHECK ──────────────────────────────────
@@ -48,7 +48,7 @@ jobs:
         run: npm test -- --coverage
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-report
           path: coverage/
