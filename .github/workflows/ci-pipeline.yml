@@ -8,7 +8,8 @@ on:
 
 env:
   NODE_VERSION: '24'
-  IMAGE_NAME: devopsforjesus/devops-demo
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  REPO_NAME: devops-demo
 
 jobs:
   # ── JOB 1: LINT AND FORMAT CHECK ──────────────────────────────────
@@ -99,7 +100,7 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push ${{ env.IMAGE_NAME }}:${{ github.sha }} \
-          docker push ${{ env.IMAGE_NAME }}:latest
+          docker push ${{ DOCKER_USERNAME }}/${{ REPO_NAME }}:${{ github.sha }} \
+          docker push ${{ DOCKER_USERNAME }}/${{ REPO_NAME }}:latest
 
  
