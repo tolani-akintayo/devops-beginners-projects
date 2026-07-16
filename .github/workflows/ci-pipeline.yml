@@ -9,7 +9,7 @@ on:
 env:
   NODE_VERSION: '24'
   REGISTRY: docker.io
-  IMAGE_NAME: devopsforjesus/devops-demo:v1.0.2
+  IMAGE_NAME: devopsforjesus/devops-demo:v1.0.3
 
 jobs:
   # ── JOB 1: LINT AND FORMAT CHECK ──────────────────────────────────
