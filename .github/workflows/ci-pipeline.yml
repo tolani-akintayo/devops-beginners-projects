@@ -100,7 +100,7 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:${{ github.sha }} \
+          docker push ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:${{ github.sha }} 
           docker push ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:latest
 
  
