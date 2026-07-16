@@ -96,7 +96,7 @@ jobs:
         run: |
           docker build \
             -t ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:${{ github.sha }} \
-            -t ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:latest
+            -t ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:latest .
 
       - name: Push Image
         run: |
