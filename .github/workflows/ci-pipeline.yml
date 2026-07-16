@@ -95,12 +95,12 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ${{ env.IMAGE_NAME }}:${{ github.sha }} \
-            -t ${{ env.IMAGE_NAME }}:latest .
+            -t ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:${{ github.sha }} \
+            -t ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:latest
 
       - name: Push Image
         run: |
-          docker push ${{ DOCKER_USERNAME }}/${{ REPO_NAME }}:${{ github.sha }} \
-          docker push ${{ DOCKER_USERNAME }}/${{ REPO_NAME }}:latest
+          docker push ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:${{ github.sha }} \
+          docker push ${{ env.DOCKER_USERNAME }}/${{ env.REPO_NAME }}:latest
 
  
