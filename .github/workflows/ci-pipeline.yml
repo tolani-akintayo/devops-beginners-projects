@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Run Linter
-        run: npm run lint
+        run: npm run lint #need to run this: npm install --save-dev eslint npx eslint --init
 
 
 
