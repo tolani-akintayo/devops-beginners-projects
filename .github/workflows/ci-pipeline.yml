@@ -33,29 +33,29 @@ jobs:
         run: npm run lint # need to run this: npm install --save-dev eslint npx eslint --init to get eslint.config.mjs file
 
   # ── JOB 2: TEST ───────────────────────────────────────────────────
-  # test:
-  #   name: Run Tests
-  #   runs-on: ubuntu-latest
-  #   needs: lint                   # Only run if lint passes
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: lint                   # Only run if lint passes
 
-  #   steps:
-  #     - uses: actions/checkout@v7
+    steps:
+      - uses: actions/checkout@v7
 
-  #     - uses: actions/setup-node@v7
-  #       with:
-  #         node-version: ${{ env.NODE_VERSION }}
-  #         cache: 'npm'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
 
-  #     - run: npm ci
+      - run: npm ci
 
-  #     - name: Run tests with coverage
-  #       run: npm test -- --coverage
+      - name: Run tests with coverage
+        run: npm test -- --coverage
 
-  #     - name: Upload coverage report
-  #       uses: actions/upload-artifact@v7
-  #       with:
-  #         name: coverage-report
-  #         path: coverage/
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report
+          path: coverage/
 
  # ── JOB 3: SECURITY SCAN ──────────────────────────────────────────
   # security:
