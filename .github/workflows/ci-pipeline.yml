@@ -76,7 +76,7 @@ jobs:
       - name: Audit dependencies
         run: npm audit --audit-level=critical
 
-  ── JOB 4: BUILD AND PUSH DOCKER IMAGE ─────────────────────────────────────
+ # ── JOB 4: BUILD AND PUSH DOCKER IMAGE ─────────────────────────────────────
   build:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
