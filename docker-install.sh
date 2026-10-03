@@ -5,7 +5,7 @@
 # =======================================================================
 
 # check the linux distribution and version (2023 or 2)
-cat /etc/os-release
+cat /etc/os-release 
 
 # Update the installed packages and package cache on your instance.
 sudo yum update -y
